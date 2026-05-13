@@ -1,0 +1,7 @@
+*.gguf
+merged_fp16/
+lora/
+__pycache__/
+*.pyc
+.env
+.DS_Store

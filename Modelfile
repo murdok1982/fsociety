@@ -1,0 +1,10 @@
+FROM fsociety.gguf
+TEMPLATE """{{ if .System }}<start_of_turn>user
+{{ .System }}
+
+{{ .Prompt }}<end_of_turn>
+<start_of_turn>model
+{{ .Response }}<end_of_turn>"""
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER stop "<end_of_turn>"
